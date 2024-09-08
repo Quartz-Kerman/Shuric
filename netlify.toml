@@ -1,0 +1,8 @@
+[build]
+  publish = "./"  # This indicates the root directory as the folder to serve from since everything is in the main branch root.
+  command = ""  # No build command needed for a static site.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

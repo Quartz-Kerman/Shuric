@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Aurebesh';
+    src: url('aurebesh/Aurebesh.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    position: relative;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('ban.jpg_large') no-repeat left center/cover;
+    transform: scaleX(-1); /* Flip the background image horizontally */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.title {
+    margin-left: 40px;
+	transform: translateY(+150%);
+    font-size: 100px;
+    color: ##d45a6a; /* Bold color for the title */
+    z-index: 3;
+    font-weight: bold; /* Make the title bold */
+}
+
+.join-movement {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #a18d88;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 3;
+}
+
+.join-movement h2 {
+    margin: 0;
+    color: #333;
+}
+
+.join-movement form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-movement input, .join-movement button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+	background: #ccc2bb
+}
+
+.translate-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+    font-family: 'Aurebesh', Arial, sans-serif; /* Aurebesh font for the button text */
+}
+
+.mission {
+    padding: 20px;
+    background: #ccc2bb; /* Matching color for mission section */
+    color: black;
+}
+
+.mission h2 {
+    font-size: 32px;
+}
+
+.box {
+	width: 315px;
+	height: 300px;
+	background-color: #a18d88;; /* Box background color */
+	border-radius: 20px; /* Rounded corners */
+	display: flex;
+	float:left;
+	justify-content: center; /* Centers content horizontally */
+	align-items: center; /* Centers content vertically */
+	color: white;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding: 20px;
+	margin: 33px;
+}
+.end {
+	height: 75px;
+	background-color: #4f3d39;; /* Box background color */
+	justify-content: center; /* Centers content horizontally */
+	align-items: center; /* Centers content vertically */
+	color: white;
+	font-family: Arial, sans-serif;
+	font-style: italic;
+	text-align: center;
+}
+		
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.popup-content {
+    background: #ccc2bb;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
